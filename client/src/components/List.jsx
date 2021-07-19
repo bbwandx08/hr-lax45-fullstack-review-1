@@ -1,33 +1,14 @@
 import React from 'react';
 import ListElement from './ListElement.jsx';
 
-const List = () =>
+const List = (props) =>
   <div>
-    <span>
-      <div>Josh</div>
-      <img src='https://ca.slack-edge.com/T02DNK3PH-U01ATPUTRH8-0c6b5a486403-512'></img>
-    </span>
-    <span>
-      <div>Josh</div>
-      <img src='https://ca.slack-edge.com/T02DNK3PH-U01ATPUTRH8-0c6b5a486403-512'></img>
-    </span>
-    <span>
-      <div>Josh</div>
-      <img src='https://ca.slack-edge.com/T02DNK3PH-U01ATPUTRH8-0c6b5a486403-512'></img>
-    </span>
-    <span>
-      <div>Josh</div>
-      <img src='https://ca.slack-edge.com/T02DNK3PH-U01ATPUTRH8-0c6b5a486403-512'></img>
-    </span>
-    <span>
-      <div>Josh</div>
-      <img src='https://ca.slack-edge.com/T02DNK3PH-U01ATPUTRH8-0c6b5a486403-512'></img>
-    </span>
-    <span>
-      <div>Josh</div>
-      <img src='https://ca.slack-edge.com/T02DNK3PH-U01ATPUTRH8-0c6b5a486403-512'></img>
-    </span>
+    {props.list.map((person) => (
+      <ListElement getStudents={props.getStudents} person={person} key={person._id}/>
+    ))
+  }
   </div>
 
 
 export default List
+ 
